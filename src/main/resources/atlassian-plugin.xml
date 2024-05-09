@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atlassian-plugin key="jira-rest-app-demo" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="atlassian-data-center-status">compatible</param>
+        <param name="atlassian-data-center-compatible">true</param>
+        <param name="plugin-type">both</param>        <!-- Single Artifact for DC and Server: https://developer.atlassian.com/platform/marketplace/dc-apps-submitting-your-app/ -->
+    </plugin-info>
+
+
+    <!-- REST -->
+    <rest-migration key="rest-migration-jira-rest-app-demo">
+        <rest-v2/>
+    </rest-migration>
+    <rest key="rest" path="/jira-rest-app-demo" version="1">
+        <description>Provides REST resources.</description>
+    </rest>
+
+</atlassian-plugin>
