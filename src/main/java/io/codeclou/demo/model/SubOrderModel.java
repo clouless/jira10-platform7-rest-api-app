@@ -8,9 +8,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SubOrderModel {
+    // FIXME: Can be solved by using @XmlElement(nillable = true)
     @XmlElement
     public String subOrderType;
 
+    // FIXME: Can be solved by using @XmlElement(nillable = true)
     @XmlElement
     public String subOrderDetails;
 
