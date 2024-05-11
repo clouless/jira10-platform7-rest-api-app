@@ -26,11 +26,13 @@ public class OrderService {
         order2.setOrderId("O-two");
         order2.setCustomerId("C-2");
         SubOrderModel sub2 = new SubOrderModel();
-        order2.setSubOrder(sub2); // <=== Problem 1: Why is it not reflected in JSON?
+        order2.setSubOrder(sub2); // <=== SOLVED
 
         OrderModel order3 = new OrderModel();
         order3.setOrderId("O-three");
-        order3.setCustomerId(null);// <=== Problem 2: Why is it not reflected in JSON?
+        order3.setCustomerId(null);// <=== SOLVED
+        order3.setSubOrder(null);// <=== SOLVED
+
 
         List<OrderModel> orders = new ArrayList<>();
         orders.add(order1);

@@ -12,10 +12,10 @@ public class OrderModel {
     @XmlElement
     String orderId;
 
-    @XmlElement
+    @XmlElement(nillable = true)
     String customerId;
 
-    @XmlElement
+    @XmlElement(nillable = true)
     SubOrderModel subOrder;
 
     public String getOrderId() {

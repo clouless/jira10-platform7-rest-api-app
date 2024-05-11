@@ -60,3 +60,31 @@ curl -u admin:admin http://localhost:8080/rest/jira-rest-app-demo/1/demo/orders
   }
 ]
 ```
+
+:white_check_mark: SOLVED: By using `@XmlElement(nillable = true)` on the right elements
+
+```json
+[
+  {
+    "orderId":"O-one",
+    "customerId":"C-1",
+    "subOrder":{
+      "subOrderType":"shipping",
+      "subOrderDetails":"customer want's it fast!"
+    }
+  },
+  {
+    "orderId":"O-two",
+    "customerId":"C-2",
+    "subOrder":{
+      "subOrderType":null,
+      "subOrderDetails":null
+    }
+  },
+  {
+    "orderId":"O-three",
+    "customerId":null,
+    "subOrder":null
+  }
+]
+```
